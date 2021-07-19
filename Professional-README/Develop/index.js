@@ -2,24 +2,29 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-//const generatePage = require('./src/page-template');
-const { writeFile, copyFile } = require('./utils/generate-site');
+const generateMarkdown = require('./utils/generateMarkdown');
+const { title } = require("process");
+//const { writeFile, copyFile } = require('./utils/generate-site');
 
 
 // const path = require('path');
 
 // TODO: Create an array of questions for user input
-const promptUser = readMeData => {
+
+const promptUser = () => {
     console.log(`
    Create a new README.md!
     `);
     return inquirer.prompt([
+
+        //Project Name
         {
             type: "input",
             name: "title",
             message: "Enter Project Title",
             validate: titleInput => {
                 if (titleInput) {
+                    console.log(title)
                     return true;
                 } else {
                     console.log('Please Enter Title');
@@ -27,6 +32,8 @@ const promptUser = readMeData => {
                 }
             }
         },
+        
+        //Description
         {
             type: "input",
             name: "description",
@@ -40,6 +47,8 @@ const promptUser = readMeData => {
                 }
             }
         },
+        
+        //Install
         {
             type: "input",
             name: "installation",
@@ -53,6 +62,8 @@ const promptUser = readMeData => {
                 }
             }
         },
+        
+        //usage info
         {
             type: "input",
             name: "usage",
@@ -66,6 +77,8 @@ const promptUser = readMeData => {
                 }
             }
         },
+        
+        //contribution guidelines
         {
             type: "input",
             name: "contribution",
@@ -79,6 +92,8 @@ const promptUser = readMeData => {
                 }
             }
         },
+        
+        //test instructions
         {
             type: "input",
             name: "test",
@@ -92,6 +107,8 @@ const promptUser = readMeData => {
                 }
             }
         },
+        
+        //github username
         {
             type: "input",
             name: "username",
@@ -104,7 +121,10 @@ const promptUser = readMeData => {
                     return false;
                 }
             }
+            
         },
+        
+        //e-mail address
         {
             type: "input",
             name: "email",
@@ -118,6 +138,8 @@ const promptUser = readMeData => {
                 }
             }
         },
+        
+        //liscensing options
         {
             type: "checkbox",
             message: "Licensing Options",
@@ -128,16 +150,21 @@ const promptUser = readMeData => {
                 "GNU Public v3.0"
             ]
         }
-
-    ])
+            
+    ])    
+    
 };
 
 // TODO: Create a function to write README file
 
-
+promptUser()
+    
+    
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    inquirer.prompt()
+ }
 
 // Function call to initialize app
 init();

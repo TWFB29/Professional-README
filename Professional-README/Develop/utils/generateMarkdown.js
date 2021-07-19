@@ -1,3 +1,27 @@
+const fs = require('fs');
+
+// writing files
+const writeFile = fileContent => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('./utils/testing.md', "fileContent", err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+
+      resolve({
+        ok: true,
+        message: 'File created!'
+      });
+    });
+  });
+};
+fs.writeFile("test.md", "suck it", function (err){
+  if (err) throw err;
+
+});
+
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -13,7 +37,31 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-
+  ## Table of Contents
+  * [Description](#Description)
+  * [Installation](#Installation-Instructions)
+  * [Usage Instructions](#Usage-Instructions)
+  * [License](#License)
+  * [Contributing Members](#Contributing-Members)
+  * [Testing](#Testing)    
+  * [Questions/Inquiries](#Questions/Inquiries)
+  ## Description
+  ${data.description}
+  ## Installation Instructions 
+  ${data.installation}
+  ## Instructions on usage 
+  ${data.usage}
+  ## Contuibution Guidelines
+  ${data.contribution}
+  ## License
+  ${data.License}
+  ## Test Instructions
+   ${data.test}
+  ## Questions/Inquiries 
+  ### GitHub Profile
+  [GitHub Profile](http://github.com/${data.username})
+  ### Email address
+  ${data.email}
 `;
 }
 
