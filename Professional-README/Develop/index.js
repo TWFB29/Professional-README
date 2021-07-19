@@ -71,12 +71,12 @@ const promptUser = [
             message: "Licensing Options",
             name: "license",
             choices: [
-                "MIT",
+                "MIT" ,
                 "Apache2.0",
                 "GNU Public v3.0",
-                console.log(license)
             ]
         }
+        
 ]            
    
     
