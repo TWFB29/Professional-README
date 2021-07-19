@@ -1,25 +1,6 @@
 const fs = require('fs');
 
-// writing files
-const writeFile = fileContent => {
-  return new Promise((resolve, reject) => {
-    fs.writeFile('./utils/testing.md', "fileContent", err => {
-      if (err) {
-        reject(err);
-        return;
-      }
 
-      resolve({
-        ok: true,
-        message: 'File created!'
-      });
-    });
-  });
-};
-fs.writeFile("test.md", "suck it", function (err){
-  if (err) throw err;
-
-});
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in
