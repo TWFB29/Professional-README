@@ -73,7 +73,8 @@ const promptUser = [
             choices: [
                 "MIT",
                 "Apache2.0",
-                "GNU Public v3.0"
+                "GNU Public v3.0",
+                console.log(license)
             ]
         }
 ]            
