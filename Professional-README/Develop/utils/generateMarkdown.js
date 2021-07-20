@@ -27,6 +27,8 @@ function generateMarkdown(data) {
   * [Testing instructions](#Test-Instructions) 
   * [e-mail](#Email-address)
   
+  ## License
+  [![license](https://img.shields.io/badge/license-${data.license}-blue)](https://shields.io)
   ## Description
   ${data.description}
   ## Installation Instructions 
@@ -35,8 +37,6 @@ function generateMarkdown(data) {
   ${data.usage}
   ## Contuibution Guidelines
   ${data.contribution}
-  ## License
-  [![license](https://img.shields.io/badge/license-${data.license}-blue)](https://shields.io)
   ## Test Instructions
    ${data.test}
   ### GitHub Profile

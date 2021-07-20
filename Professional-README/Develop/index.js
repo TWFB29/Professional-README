@@ -87,7 +87,7 @@ const promptUser = [
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(promptUser).then((data) => {
-        fs.writeFile('Profile.md', generateMarkdown(data),(err) => err? console.error(err) : console.log("Success!"))})
+        fs.writeFile('README.md', generateMarkdown(data),(err) => err? console.error(err) : console.log("Success!"))})
     }
  
  
