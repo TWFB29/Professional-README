@@ -26,4 +26,4 @@
   ### Email address
   [e-mail address](twfb29@yahoo.com)
   ### Walk through
-  [Walk through video](./images/walkthrough.webm)
+  [Walk through video](https://drive.google.com/file/d/1RpDMga1sqpsTChqXrdlxxIeQdZbBQcqB/view)
